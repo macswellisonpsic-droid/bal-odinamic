@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estoure um Balão</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>ESTOURE UM BALÃO</h1>
+  <p class="sub">Cada escolha pode revelar algo que merece ser escutado.</p>
+  <p class="ins">Escolha um número, mire e descubra a reflexão que ele guarda.</p>
+</header>
+
+<main><div id="grid" role="group" aria-label="Balões numerados de 1 a 30"></div></main>
+
+<svg id="arrow" viewBox="0 0 14 100" aria-hidden="true">
+  <path d="M7 0 L13 17 L7 13 L1 17Z" fill="#e9eef7"/>
+  <rect x="6" y="13" width="2" height="72" rx="1" fill="#c8a36a"/>
+  <path d="M7 78 L12 90 L7 87 L2 90Z M7 70 L12 82 L7 79 L2 82Z" fill="#ff7a8a"/>
+</svg>
+
+<div id="fx" aria-hidden="true"></div>
+
+<footer>
+  <div id="bow" aria-hidden="true"><i></i></div>
+  <div class="row">
+    <button id="fire" class="main" disabled>ESTOURAR BALÃO</button>
+    <button id="snd" class="ghost" aria-pressed="false">🔇 Som desligado</button>
+    <button id="stop" class="ghost">Encerrar</button>
+  </div>
+  <div class="info">
+    <span id="selinfo" aria-live="polite">Nenhum balão selecionado</span>
+    <span id="prog" aria-live="polite">Balões estourados: 0 de 30</span>
+  </div>
+</footer>
+
+<div id="panel" class="overlay" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="ptitle">
+    <button id="pclose" class="x" aria-label="Fechar">✕</button>
+    <div class="meta"><span id="pnum"></span><span id="pcat"></span></div>
+    <h2 id="ptitle"></h2>
+    <p id="ptext"></p>
+    <button id="pnext" class="main">CONTINUAR</button>
+  </div>
+</div>
+
+<div id="end" class="overlay" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="etitle">
+    <h2 id="etitle">Encerramento</h2>
+    <p id="etext"></p>
+    <div class="endbtns">
+      <button id="restart" class="main">RECOMEÇAR DINÂMICA</button>
+      <button id="endclose" class="ghost dark">ENCERRAR</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
